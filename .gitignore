@@ -4,9 +4,11 @@ apikey.txt
 gmail_sender.txt
 gmail_app_password.txt
 
-# ─── PRIVATE USER DATA — your filters / locality ──────────
-config.local.json
+# ─── PERSONAL NOTES (not for the repo) ────────────────────
 BUILDINGS.md
+# NOTE: config.local.json IS committed in this personal/private tracker repo
+# (filters + recipient only — no secrets) so filters can be edited without code
+# changes. In the shareable digest project it stays gitignored.
 
 # ─── LOCAL STATE & GENERATED OUTPUT ───────────────────────
 snapshot.json

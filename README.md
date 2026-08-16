@@ -87,7 +87,7 @@ so it runs daily without your machine being on. See
 | File | Purpose |
 |---|---|
 | `main.py` | Orchestrator |
-| `config.py` / `config.local.json` | Config loader / your filters (gitignored) |
+| `config.py` / `config.local.json` | Config loader / your filters (committed here — no secrets; edit to change filters) |
 | `secrets_env.py` / `.env` | Secret loader / your secrets (gitignored) |
 | `safefetch.py` | SSRF-resistant HTTP helper |
 | `sources_rentcast.py` / `sources_newport_rentals.py` / `sources_avalon.py` | Fetchers |

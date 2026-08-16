@@ -1,0 +1,22 @@
+{
+  "search": {
+    "bedrooms": 2,
+    "max_rent": 4200,
+    "location": {
+      "latitude": 40.7266,
+      "longitude": -74.0339,
+      "radius_miles": 0.6
+    }
+  },
+  "sources": {
+    "rentcast": true
+  },
+  "watch_urls": [
+    "https://www.newportrentals.com/2-bedroom-apartments-jersey-city/",
+    "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/",
+    "https://www.rentcafe.com/apartments/nj/jersey-city/the-blvd-collection/default.aspx"
+  ],
+  "email": {
+    "recipient": "pk.buddy75@gmail.com"
+  }
+}

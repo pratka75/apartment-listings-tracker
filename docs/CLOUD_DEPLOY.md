@@ -6,19 +6,19 @@ session, clones this repo, runs the tracker, emails you, and saves state back.
 
 ## Why this needs a few special steps
 
-A cloud run is stateless and isolated — it can't see your laptop. So the
-committed repo stays **pure code** — no filters, no secrets — and the routine
-injects everything private at runtime:
+A cloud run is stateless and isolated — it can't see your laptop. In this
+private repo:
 
-- **Filters** (`config.local.json`) are written by the agent from the routine
-  prompt each run. Nothing private is committed.
+- **Filters** (`config.local.json`) are **committed to the repo** (filters +
+  recipient only — no secrets). Change your budget/beds/area anytime by editing
+  that one file (or regenerating it with `webapp/index.html`); no code or routine
+  changes needed. The next run picks it up.
 - **Secrets** (`.env`) are written by the agent from the routine prompt each run.
-  Never committed.
-- **State** (`snapshot.json`, `rentcast_usage.json`) must persist between days,
-  so the agent commits *only those* back to the repo after each run.
+  **Never committed.**
+- **State** (`snapshot.json`, `rentcast_usage.json`) is committed back by the
+  agent after each run so change-detection persists between days.
 
-This keeps the repo identical to the shareable code and leaks nothing if the repo
-is ever exposed. Keeping it **private** is still recommended.
+Because filters live in the repo, keep it **private**.
 
 ## Prerequisites
 
@@ -39,36 +39,28 @@ with:
   config, which is stored in Anthropic's cloud, not in git)
 
 ```
-You are running the apartment-listings-tracker in this repo. Do exactly this:
+You are running the apartment-listings-tracker in this cloned repo. Filters are
+already in config.local.json (committed). Do EXACTLY this, and never print .env
+or any secret value.
 
-1. Write config.local.json in the repo root with EXACTLY this content:
-   {
-     "search": { "bedrooms": 2, "max_rent": 4200,
-       "location": { "latitude": 40.7266, "longitude": -74.0339, "radius_miles": 0.6 } },
-     "sources": { "rentcast": true },
-     "watch_urls": [
-       "https://www.newportrentals.com/2-bedroom-apartments-jersey-city/",
-       "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/",
-       "https://www.rentcafe.com/apartments/nj/jersey-city/the-blvd-collection/default.aspx"
-     ],
-     "email": { "recipient": "<your-recipient-email>" }
-   }
-
-2. Write a .env file in the repo root with EXACTLY these lines:
+1. Write a .env file in the repo root with EXACTLY these lines (replace the
+   <<FILL>> markers with real values before enabling this routine):
    GMAIL_SENDER=<your-gmail-address>
-   GMAIL_APP_PASSWORD=<your-app-password>
-   RENTCAST_API_KEY=<your-rentcast-key>
+   GMAIL_APP_PASSWORD=<<FILL: your Gmail app password>>
+   RENTCAST_API_KEY=<<FILL: your RentCast API key>>
 
-3. Run: python main.py --email
+2. Run: python main.py --email
 
-4. Persist state so tomorrow's run can detect changes (only these two files):
+3. Persist state so tomorrow's run can detect changes (only these two files):
    git add -f snapshot.json rentcast_usage.json
    git -c user.email=bot@local -c user.name=tracker commit -m "state update" || true
    git push || true
 
-5. Report the counts printed by main.py (new / price drops / removed / back).
-Never print the contents of .env, config.local.json, or any secret.
+4. Report the counts printed by main.py (new / price drops / removed / back).
 ```
+
+> To change filters later (beds, rent, area, links), edit `config.local.json` in
+> the repo — no change to this prompt or the code.
 
 ## Security notes for cloud
 
