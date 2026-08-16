@@ -107,52 +107,87 @@ def _h2(title, color="#1a5"):
             f'padding-bottom:4px;color:#222;">{esc(title)}</h2>')
 
 
-def build_html(current, changes, cfg=None, manual_links=None) -> str:
+def _priced(listings):
+    return [l for l in listings if isinstance(l.get("price"), (int, float))]
+
+
+def build_html(current, changes, cfg=None, manual_links=None, prev_active=None) -> str:
     cfg = cfg or get_config()
     budget = cfg["search"]["max_rent"]
+    prev_active = prev_active or {}
 
     new_ids = {l["id"] for l in changes["new"]}
     back_ids = {l["id"] for l in changes["back_in_market"]}
     drop_map = {c["listing"]["id"]: c for c in changes["price_changes"] if c["delta"] < 0}
     rise_map = {c["listing"]["id"]: c for c in changes["price_changes"] if c["delta"] > 0}
-    changed = new_ids | back_ids | set(drop_map) | set(rise_map)
 
-    # Group current listings by provider category.
-    groups: dict[str, list] = {}
-    for l in current:
-        groups.setdefault(category_of(l), []).append(l)
+    def group(listings):
+        g: dict[str, list] = {}
+        for l in listings:
+            g.setdefault(category_of(l), []).append(l)
+        return g
+
+    cur_by_cat = group(current)
+    prev_by_cat = group(prev_active.values())
+
+    def in_budget(l):
+        return isinstance(l.get("price"), (int, float)) and l["price"] <= budget
+
+    # Summary counts — all in-budget only.
+    n_new = sum(1 for l in changes["new"] if in_budget(l))
+    n_drop = sum(1 for c in drop_map.values() if c["new_price"] <= budget)
+    n_removed = sum(1 for l in changes["removed"] if in_budget(l))
+    n_back = sum(1 for l in changes["back_in_market"] if in_budget(l))
 
     parts = [f'<div style="max-width:700px;margin:auto;font-family:Arial,sans-serif;color:#222;'
              f'background:#fff;padding:20px;border-radius:8px;">',
              f'<h1 style="font-size:20px;">🏙️ Apartment Alert — {date.today():%b %d, %Y}</h1>',
-             f'<p style="color:#555;">{len(new_ids)} new · {len(drop_map)} price drops · '
-             f'{len(rise_map)} increases · {len(changes["removed"])} removed · '
-             f'{len(back_ids)} back. In-budget threshold ≤ ${budget:,}.</p>']
+             f'<p style="color:#555;">Only listings ≤ ${budget:,}. '
+             f'{n_new} new · {n_drop} price drops · {n_removed} removed · {n_back} back.</p>']
 
-    for cat in sorted(groups, key=_category_sort_key):
-        items = groups[cat]
-        # Show in-budget listings and anything that changed; if none, show cheapest 2.
-        show = [l for l in items if (l.get("price") or 1e9) <= budget or l["id"] in changed]
-        note = ""
-        if not show:
-            show = sorted((l for l in items if l.get("price")), key=lambda x: x["price"])[:2]
-            note = " (cheapest shown — none in budget)"
-        show = sorted(show, key=lambda x: x.get("price") or 1e9)
-        extra_note = ""
-        if len(show) > MAX_ROWS_PER_CATEGORY:
-            hidden = len(show) - MAX_ROWS_PER_CATEGORY
-            show = show[:MAX_ROWS_PER_CATEGORY]
-            extra_note = f'<tr><td colspan="3" style="padding:6px 10px;color:#999;font-size:12px;">' \
-                         f'…and {hidden} more in this category.</td></tr>'
-        rows = "".join(_row(l, _badges(l, new_ids, back_ids, drop_map, rise_map)) for l in show)
-        parts.append(_h2(f"{cat}{note}"))
-        parts.append(_table(rows + extra_note))
+    for cat in sorted(cur_by_cat, key=_category_sort_key):
+        items = cur_by_cat[cat]
+        source = items[0].get("source")
+        budget_items = sorted((l for l in items if in_budget(l)), key=lambda x: x["price"])
 
-    # Removed (across all categories).
-    if changes["removed"]:
-        rows = "".join(_row(l) for l in changes["removed"])
+        if budget_items:
+            shown, extra_note = budget_items, ""
+            if len(shown) > MAX_ROWS_PER_CATEGORY:
+                hidden = len(shown) - MAX_ROWS_PER_CATEGORY
+                shown = shown[:MAX_ROWS_PER_CATEGORY]
+                extra_note = (f'<tr><td colspan="3" style="padding:6px 10px;color:#999;font-size:12px;">'
+                              f'…and {hidden} more ≤ ${budget:,} in this category.</td></tr>')
+            rows = "".join(_row(l, _badges(l, new_ids, back_ids, drop_map, rise_map)) for l in shown)
+            parts.append(_h2(cat))
+            parts.append(_table(rows + extra_note))
+
+        elif source != "rentcast":
+            # Watched building with nothing under budget: track only the cheapest 2BR
+            # and compare its price to yesterday's cheapest in the same building.
+            priced = _priced(items)
+            if not priced:
+                continue
+            cheapest = min(priced, key=lambda x: x["price"])
+            prev_prices = [l["price"] for l in _priced(prev_by_cat.get(cat, []))]
+            prev_cheapest = min(prev_prices) if prev_prices else None
+            badge = ""
+            if prev_cheapest is not None and prev_cheapest != cheapest["price"]:
+                delta = cheapest["price"] - prev_cheapest
+                color = "#c0392b" if delta < 0 else "#777"
+                arrow = "↓" if delta < 0 else "↑"
+                badge = (f'<span style="display:inline-block;padding:1px 7px;border-radius:10px;'
+                         f'font-size:11px;font-weight:700;background:#fbe9e7;color:{color};">'
+                         f'{arrow} cheapest {_fmt(prev_cheapest)}→{_fmt(cheapest["price"])} '
+                         f'({delta:+,})</span>')
+            parts.append(_h2(f"{cat} — cheapest (none ≤ ${budget:,})", color="#a60"))
+            parts.append(_table(_row(cheapest, badge)))
+        # rentcast with nothing in budget -> show nothing.
+
+    # Removed — only in-budget listings that disappeared.
+    removed_budget = [l for l in changes["removed"] if in_budget(l)]
+    if removed_budget:
         parts.append(_h2("❌ Removed (likely rented)", color="#999"))
-        parts.append(_table(rows))
+        parts.append(_table("".join(_row(l) for l in removed_budget)))
 
     # Links we couldn't auto-scrape — surfaced for a manual check.
     if manual_links:

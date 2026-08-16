@@ -65,7 +65,8 @@ def main():
     print(f"Changes: {len(changes['new'])} new, {len(changes['price_changes'])} price changes, "
           f"{len(changes['removed'])} removed, {len(changes['back_in_market'])} back.")
 
-    html = digest.build_html(current, changes, cfg, manual_links=manual)
+    html = digest.build_html(current, changes, cfg, manual_links=manual,
+                             prev_active=snapshot.get("active", {}))
     DIGEST_OUT.write_text(html, encoding="utf-8")
     print(f"Digest written to {DIGEST_OUT.name}")
 
