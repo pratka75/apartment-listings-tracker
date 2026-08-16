@@ -1,0 +1,26 @@
+# ─── SECRETS — never commit ───────────────────────────────
+.env
+apikey.txt
+gmail_sender.txt
+gmail_app_password.txt
+
+# ─── PRIVATE USER DATA — your filters / locality ──────────
+config.local.json
+BUILDINGS.md
+
+# ─── LOCAL STATE & GENERATED OUTPUT ───────────────────────
+snapshot.json
+rentcast_usage.json
+digest.html
+digest_demo.html
+test_raw_response.json
+_np_sample.html
+_*.html
+
+# ─── PYTHON ───────────────────────────────────────────────
+__pycache__/
+*.pyc
+
+# ─── EXPLICITLY KEEP THESE TEMPLATES (must ship) ──────────
+!config.example.json
+!.env.example

@@ -1,0 +1,21 @@
+{
+  "search": {
+    "bedrooms": 2,
+    "max_rent": 3000,
+    "location": {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "radius_miles": 3
+    }
+  },
+  "watch_towers": [
+    { "name": "Example Luxury Tower", "match": ["123 main st", "example tower"] }
+  ],
+  "sources": {
+    "rentcast": true,
+    "newport_rentals": false
+  },
+  "email": {
+    "recipient": "you@example.com"
+  }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set Up Your Apartment Alerts</title>
+<style>
+  :root { color-scheme: light dark; --bg:#f6f7f9; --card:#fff; --fg:#1a1c1e; --muted:#666;
+          --border:#d8dbe0; --accent:#1a7f4b; --accent2:#2c6fbf; --danger:#c0392b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#15171a; --card:#1e2126; --fg:#e6e8eb; --muted:#9aa0a6; --border:#333941; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.5; }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 18px 60px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px;
+          padding:20px; margin-bottom:18px; }
+  .card h2 { font-size:16px; margin:0 0 14px; }
+  label { display:block; font-size:13px; font-weight:600; margin:12px 0 4px; }
+  .hint { font-weight:400; color:var(--muted); font-size:12px; }
+  input, select { width:100%; padding:9px 10px; border:1px solid var(--border);
+                  border-radius:8px; background:transparent; color:var(--fg); font-size:14px; }
+  .row { display:flex; gap:12px; flex-wrap:wrap; }
+  .row > div { flex:1; min-width:120px; }
+  .checks { display:flex; gap:18px; flex-wrap:wrap; margin-top:8px; }
+  .checks label { display:flex; align-items:center; gap:8px; font-weight:500; margin:0; }
+  .checks input { width:auto; }
+  .linkrow { display:flex; gap:8px; margin-bottom:8px; }
+  .linkrow input { flex:1; }
+  button { cursor:pointer; border:none; border-radius:8px; padding:10px 16px;
+           font-size:14px; font-weight:600; }
+  .btn-add { background:transparent; border:1px dashed var(--border); color:var(--accent2); }
+  .btn-del { background:transparent; border:1px solid var(--border); color:var(--danger);
+             padding:8px 12px; }
+  .btn-primary { background:var(--accent); color:#fff; }
+  .btn-ghost { background:transparent; border:1px solid var(--border); color:var(--fg); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  pre { background:var(--bg); border:1px solid var(--border); border-radius:8px;
+        padding:14px; overflow:auto; font-size:13px; max-height:340px; }
+  .note { background:color-mix(in srgb, var(--accent2) 12%, transparent);
+          border:1px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+          border-radius:8px; padding:12px 14px; font-size:13px; margin-bottom:18px; }
+  .err { color:var(--danger); font-size:13px; min-height:18px; margin-top:6px; }
+  code { background:var(--bg); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🏙️ Set up your apartment alerts</h1>
+  <p class="sub">Fill in what you're looking for, then download your settings.
+     Everything stays in your browser — nothing is uploaded.</p>
+
+  <div class="note">🔒 <strong>No passwords here.</strong> This page only saves your search
+     preferences. Your email password and any API key are added separately during setup —
+     see the guide.</div>
+
+  <div class="card">
+    <h2>What are you looking for?</h2>
+    <div class="row">
+      <div>
+        <label>Bedrooms <span class="hint">(0 = studio)</span></label>
+        <input id="bedrooms" type="number" min="0" max="10" value="2">
+      </div>
+      <div>
+        <label>Max rent (per month, USD)</label>
+        <input id="maxRent" type="number" min="1" value="3000">
+      </div>
+    </div>
+
+    <label>Where? <span class="hint">Pick how you'd like to define the area</span></label>
+    <select id="locMode">
+      <option value="latlon">Map point + radius (most precise)</option>
+      <option value="zip">Zip code</option>
+      <option value="city">City + state</option>
+    </select>
+
+    <div id="loc-latlon" class="row" style="margin-top:8px;">
+      <div><label>Latitude</label><input id="lat" type="number" step="any" placeholder="40.7267"></div>
+      <div><label>Longitude</label><input id="lon" type="number" step="any" placeholder="-74.0345"></div>
+      <div><label>Radius (miles)</label><input id="radius" type="number" step="any" min="0.1" max="100" value="1"></div>
+    </div>
+    <div id="loc-zip" class="row" style="margin-top:8px; display:none;">
+      <div><label>Zip code</label><input id="zip" maxlength="5" placeholder="07310"></div>
+    </div>
+    <div id="loc-city" class="row" style="margin-top:8px; display:none;">
+      <div><label>City</label><input id="city" placeholder="Jersey City"></div>
+      <div><label>State <span class="hint">(2-letter)</span></label><input id="state" maxlength="2" placeholder="NJ"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Where should we search?</h2>
+    <div class="checks">
+      <label><input type="checkbox" id="src-rentcast" checked> Listings database
+        <span class="hint">(covers most areas automatically)</span></label>
+    </div>
+
+    <label style="margin-top:16px;">Add specific listing pages to watch <span class="hint">— optional</span></label>
+    <p class="hint" style="margin-top:0;">Paste the web address of any building or listings page you want
+       included in the daily scan (for example a specific apartment building's availability page).</p>
+    <div id="links"></div>
+    <button class="btn-add" type="button" onclick="addLink()">+ Add a link</button>
+  </div>
+
+  <div class="card">
+    <h2>Where should we email you?</h2>
+    <label>Your email address</label>
+    <input id="recipient" type="email" placeholder="you@gmail.com">
+  </div>
+
+  <div class="actions">
+    <button class="btn-primary" type="button" onclick="generate()">Generate settings</button>
+    <button class="btn-ghost" type="button" onclick="download_()">Download settings</button>
+    <button class="btn-ghost" type="button" onclick="copy_()">Copy</button>
+  </div>
+  <div class="err" id="err"></div>
+
+  <div class="card" style="margin-top:18px;">
+    <h2>Preview</h2>
+    <pre id="out">Click "Generate settings".</pre>
+  </div>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+
+  $('locMode').addEventListener('change', () => {
+    const m = $('locMode').value;
+    $('loc-latlon').style.display = m === 'latlon' ? 'flex' : 'none';
+    $('loc-zip').style.display    = m === 'zip'    ? 'flex' : 'none';
+    $('loc-city').style.display   = m === 'city'   ? 'flex' : 'none';
+  });
+
+  function addLink(value = '') {
+    const div = document.createElement('div');
+    div.className = 'linkrow';
+    const input = document.createElement('input');
+    input.type = 'url';
+    input.placeholder = 'https://example.com/apartments';
+    input.value = value;
+    const del = document.createElement('button');
+    del.className = 'btn-del'; del.type = 'button'; del.textContent = '✕';
+    del.onclick = () => div.remove();
+    div.append(input, del);
+    $('links').appendChild(div);
+  }
+  addLink(); // start with one empty row
+
+  let lastConfig = null;
+
+  function buildConfig() {
+    const beds = parseInt($('bedrooms').value, 10);
+    const maxRent = parseInt($('maxRent').value, 10);
+    if (Number.isNaN(beds) || beds < 0) throw 'Bedrooms must be 0 or more.';
+    if (Number.isNaN(maxRent) || maxRent <= 0) throw 'Max rent must be a positive number.';
+
+    let location;
+    const m = $('locMode').value;
+    if (m === 'latlon') {
+      const lat = parseFloat($('lat').value), lon = parseFloat($('lon').value),
+            r = parseFloat($('radius').value);
+      if (Number.isNaN(lat) || lat < -90 || lat > 90) throw 'Latitude must be between -90 and 90.';
+      if (Number.isNaN(lon) || lon < -180 || lon > 180) throw 'Longitude must be between -180 and 180.';
+      if (Number.isNaN(r) || r <= 0 || r > 100) throw 'Radius must be between 0 and 100 miles.';
+      location = { latitude: lat, longitude: lon, radius_miles: r };
+    } else if (m === 'zip') {
+      const z = $('zip').value.trim();
+      if (!/^\d{5}$/.test(z)) throw 'Zip code must be 5 digits.';
+      location = { zipCode: z };
+    } else {
+      const c = $('city').value.trim(), s = $('state').value.trim().toUpperCase();
+      if (!c) throw 'City is required.';
+      if (!/^[A-Z]{2}$/.test(s)) throw 'State must be 2 letters.';
+      location = { city: c, state: s };
+    }
+
+    // Collect pasted links; accept http/https only.
+    const watch_urls = [];
+    for (const input of document.querySelectorAll('#links input')) {
+      const u = input.value.trim();
+      if (!u) continue;
+      if (!/^https?:\/\/\S+$/i.test(u)) throw `"${u}" is not a valid http(s) link.`;
+      watch_urls.push(u);
+    }
+
+    const recipient = $('recipient').value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(recipient)) throw 'Enter a valid email address.';
+
+    const cfg = {
+      search: { bedrooms: beds, max_rent: maxRent, location },
+      sources: { rentcast: $('src-rentcast').checked },
+      email: { recipient }
+    };
+    if (watch_urls.length) cfg.watch_urls = watch_urls;
+    return cfg;
+  }
+
+  function generate() {
+    $('err').textContent = ''; $('err').style.color = '';
+    try {
+      lastConfig = buildConfig();
+      $('out').textContent = JSON.stringify(lastConfig, null, 2);
+    } catch (e) {
+      lastConfig = null;
+      $('err').textContent = typeof e === 'string' ? e : 'Something went wrong.';
+      $('out').textContent = 'Fix the note above, then generate again.';
+    }
+  }
+
+  function download_() {
+    generate();
+    if (!lastConfig) return;
+    const blob = new Blob([JSON.stringify(lastConfig, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'config.local.json';   // the filename the app reads; user just saves it
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function copy_() {
+    generate();
+    if (!lastConfig) return;
+    navigator.clipboard.writeText(JSON.stringify(lastConfig, null, 2))
+      .then(() => { $('err').style.color = 'var(--accent)'; $('err').textContent = 'Copied!';
+                    setTimeout(() => { $('err').textContent = ''; $('err').style.color = ''; }, 1500); });
+  }
+</script>
+</body>
+</html>
