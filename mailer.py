@@ -25,7 +25,11 @@ def send(subject: str, html_body: str, to: str | None = None) -> None:
     sender = _single_line(get_secret("GMAIL_SENDER"))
     # App passwords are displayed with spaces for readability; Gmail accepts them without.
     app_password = get_secret("GMAIL_APP_PASSWORD").replace(" ", "")
-    to = _single_line(to or get_config()["email"]["recipient"])
+    # Recipient resolution (so it need not sit in a public repo):
+    #   explicit arg -> DIGEST_RECIPIENT env -> config email.recipient -> sender itself
+    recipient = (to or get_secret("DIGEST_RECIPIENT", required=False)
+                 or get_config().get("email", {}).get("recipient") or sender)
+    to = _single_line(recipient)
 
     msg = EmailMessage()
     msg["Subject"] = _single_line(subject)

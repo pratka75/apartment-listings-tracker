@@ -82,8 +82,11 @@ def _validate(cfg: dict) -> dict:
     _require(isinstance(sources, dict), "sources must be an object of {name: bool}")
 
     email = cfg.get("email", {})
-    _require(isinstance(email, dict) and email.get("recipient"), "email.recipient is required")
-    email["recipient"] = _clean_email(email["recipient"], "email.recipient")
+    _require(isinstance(email, dict), "email must be an object")
+    # recipient is OPTIONAL in config: it can instead come from the DIGEST_RECIPIENT
+    # env var (so it need not live in a public repo). Validate only if present.
+    if email.get("recipient"):
+        email["recipient"] = _clean_email(email["recipient"], "email.recipient")
 
     return cfg
 

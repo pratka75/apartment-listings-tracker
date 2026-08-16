@@ -46,6 +46,7 @@ or any secret value.
 1. Write a .env file in the repo root with EXACTLY these lines (replace the
    <<FILL>> markers with real values before enabling this routine):
    GMAIL_SENDER=<your-gmail-address>
+   DIGEST_RECIPIENT=<where-to-send-the-digest>
    GMAIL_APP_PASSWORD=<<FILL: your Gmail app password>>
    RENTCAST_API_KEY=<<FILL: your RentCast API key>>
 
