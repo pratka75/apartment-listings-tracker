@@ -9,13 +9,12 @@ Returns (listings, manual_links) where manual_links = [{"url":..., "reason":...}
 
 from urllib.parse import urlsplit
 
-import sources_avalon
-import sources_newport_rentals
+from . import avalon, newport_rentals
 
 # domain substring -> callable(url) -> list[listing]
 ADAPTERS = [
-    ("newportrentals.com", sources_newport_rentals.fetch),
-    ("avaloncommunities.com", sources_avalon.fetch),
+    ("newportrentals.com", newport_rentals.fetch),
+    ("avaloncommunities.com", avalon.fetch),
 ]
 
 # Platforms known to block lightweight fetches; surfaced as manual links instead.

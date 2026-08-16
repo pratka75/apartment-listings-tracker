@@ -10,10 +10,10 @@ example.
 import json
 import re
 from functools import lru_cache
-from pathlib import Path
 
-HERE = Path(__file__).parent
-CONFIG_PATH = HERE / "config.local.json"
+from .paths import ROOT
+
+CONFIG_PATH = ROOT / "config.local.json"
 
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 

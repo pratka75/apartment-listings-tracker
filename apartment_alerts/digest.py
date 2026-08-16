@@ -11,7 +11,7 @@ import html as _html
 from datetime import date
 from urllib.parse import quote_plus, urlsplit
 
-from config import get_config
+from .config import get_config
 
 MAX_ROWS_PER_CATEGORY = 25
 

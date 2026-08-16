@@ -13,14 +13,13 @@ api.rentcast.io — so opening a listing from the email can never spend quota.
 import json
 import urllib.parse
 from datetime import date
-from pathlib import Path
 
-import safefetch
-from config import get_config
-from secrets_env import get_secret
+from .. import safefetch
+from ..config import get_config
+from ..paths import ROOT
+from ..secrets_env import get_secret
 
-HERE = Path(__file__).parent
-USAGE_FILE = HERE / "rentcast_usage.json"
+USAGE_FILE = ROOT / "rentcast_usage.json"
 REQUEST_BUDGET = 45          # stay safely under the 50/month free tier
 API = "https://api.rentcast.io/v1/listings/rental/long-term"
 

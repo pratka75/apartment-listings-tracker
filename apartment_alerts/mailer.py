@@ -13,8 +13,8 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 
-from config import get_config
-from secrets_env import get_secret
+from .config import get_config
+from .secrets_env import get_secret
 
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 

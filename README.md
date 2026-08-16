@@ -63,7 +63,7 @@ Washington Blvd corridor.
 
 ```bash
 cp .env.example .env          # add GMAIL_SENDER, GMAIL_APP_PASSWORD, RENTCAST_API_KEY
-python test_security.py       # optional
+python tests/test_security.py # optional
 python main.py --email        # fetch, build digest, email it
 ```
 
@@ -92,16 +92,24 @@ budget/beds/area. Secrets live only in encrypted Actions secrets, never in git.
 
 ---
 
-## Files
+## Project layout
 
-| File | Purpose |
-|---|---|
-| `main.py` | Orchestrator |
-| `config.py` / `config.local.json` | Config loader / your filters (committed here — no secrets; edit to change filters) |
-| `secrets_env.py` / `.env` | Secret loader / your secrets (gitignored) |
-| `safefetch.py` | SSRF-resistant HTTP helper |
-| `sources_rentcast.py` / `sources_newport_rentals.py` / `sources_avalon.py` | Fetchers |
-| `sources_links.py` | Routes `watch_urls` to parsers or the manual section |
-| `engine.py` / `digest.py` / `mailer.py` | Diff / category email / Gmail sender |
-| `scripts/check_secrets.py` | Pre-commit secret scanner |
-| `test_security.py` | Security regression suite |
+```
+main.py                       # entry point: python main.py [--email] [--no-save]
+apartment_alerts/             # the Python package
+├── cli.py                    # orchestrator
+├── config.py                 # loads config.local.json (repo root)
+├── secrets_env.py            # loads .env (repo root)
+├── safefetch.py              # SSRF-resistant HTTP helper
+├── engine.py                 # snapshot + diff
+├── digest.py                 # category HTML email builder (escaped)
+├── mailer.py                 # Gmail SMTP sender
+└── sources/                  # rentcast.py, newport_rentals.py, avalon.py, links.py
+scripts/check_secrets.py      # pre-commit secret scanner
+tests/test_security.py        # security regression suite (26 checks)
+webapp/index.html             # static config builder
+config.local.json  .env       # your filters (committed) / secrets (gitignored)
+```
+
+Runtime data (`config.local.json`, `.env`, `snapshot.json`, `rentcast_usage.json`)
+lives at the repo root; the package resolves it via `apartment_alerts/paths.py`.

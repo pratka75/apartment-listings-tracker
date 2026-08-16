@@ -10,10 +10,11 @@ Secrets are never printed or logged by this module.
 
 import os
 from functools import lru_cache
-from pathlib import Path
 
-HERE = Path(__file__).parent
-ENV_FILE = HERE / ".env"
+from .paths import ROOT
+
+HERE = ROOT
+ENV_FILE = ROOT / ".env"
 
 # Back-compat: map secret names to the original single-value files.
 _LEGACY_FILES = {

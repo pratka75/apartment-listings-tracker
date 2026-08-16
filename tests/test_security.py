@@ -15,18 +15,15 @@ Covers the app's attack surface:
 Exit code is non-zero if any check fails.
 """
 
-import io
 import re
 import sys
-from contextlib import redirect_stdout
 from pathlib import Path
 
-import digest
-import config
-import mailer
-import safefetch
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))            # make the apartment_alerts package importable
 
-HERE = Path(__file__).parent
+from apartment_alerts import config, digest, mailer, safefetch  # noqa: E402
+
 results = []
 
 
@@ -100,7 +97,7 @@ except Exception:
     check("size cap enforced (skipped - offline)", True)
 
 # 7. Secret scanner catches a planted secret; ignores placeholders.
-sys.path.insert(0, str(HERE / "scripts"))
+sys.path.insert(0, str(ROOT / "scripts"))
 import check_secrets  # noqa: E402
 def scan_line(line):
     return any(p.search(line) for p in check_secrets.PATTERNS) and not check_secrets.looks_placeholder(line)
@@ -114,9 +111,7 @@ check("scanner ignores placeholder", not scan_line("RENTCAST_API_KEY=" + "your_k
 # 8. No dangerous builtins in the codebase.
 danger = re.compile(r"\b(eval|exec|os\.system|subprocess|pickle\.load|yaml\.load)\s*\(|shell\s*=\s*True")
 offenders = []
-for py in HERE.glob("*.py"):
-    if py.name == "test_security.py":
-        continue
+for py in (ROOT / "apartment_alerts").rglob("*.py"):
     for i, line in enumerate(py.read_text(encoding="utf-8").splitlines(), 1):
         if danger.search(line):
             offenders.append(f"{py.name}:{i}")

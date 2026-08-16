@@ -9,7 +9,7 @@ same adapter works for any AvalonBay community, not just this one.
 
 import json
 
-import safefetch
+from .. import safefetch
 
 
 def _extract_units(html: str) -> list[dict]:

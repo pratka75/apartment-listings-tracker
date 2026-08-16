@@ -20,7 +20,7 @@ Normalized listing schema (shared across all sources):
 
 import re
 
-import safefetch
+from .. import safefetch
 
 URL = "https://www.newportrentals.com/2-bedroom-apartments-jersey-city/"
 
