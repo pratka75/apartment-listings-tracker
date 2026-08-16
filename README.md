@@ -1,14 +1,14 @@
 # Apartment Listings Tracker
 
 > **🔒 Personal project — not a general template.** This copy is tailored
-> specifically to **2-bedroom apartments near Newport, Jersey City NJ** and is
-> maintained for my own use (it includes Newport-specific building scrapers for
-> Newport Rentals and Avalon Cove). **If you want alerts for your own city, use
-> the general-purpose, shareable version instead:**
+> specifically to **Newport, Jersey City NJ** and is maintained for my own use
+> (it includes Newport-specific building scrapers for Newport Rentals and Avalon
+> Cove). **If you want alerts for your own city, use the general-purpose,
+> shareable version instead:**
 > **[apartment-listings-digest »](https://github.com/pratka75/apartment-listings-digest)**
 
-A daily email digest of **2-bedroom apartments near Newport PATH (Jersey City)**,
-grouped by provider, with new / price-drop / removed / back-on-market detection.
+A daily email digest of **apartments near Newport PATH (Jersey City)**, grouped by
+provider, with new / price-drop / removed / back-on-market detection.
 
 Designed to run **hands-free in the cloud** so alerts arrive with the laptop off.
 
