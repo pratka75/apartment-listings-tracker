@@ -31,7 +31,9 @@ Create a scheduled routine (via the `/schedule` skill or claude.ai/code/routines
 with:
 
 - **Repo:** your private GitHub URL
-- **Schedule:** daily, e.g. `0 12 * * *` (UTC) = 8 AM ET
+- **Schedule:** daily at **6 PM ET** = `0 22 * * *` (UTC, during EDT).
+  Cron is fixed UTC, so when clocks change to EST (winter) this fires at 5 PM ET
+  — update to `0 23 * * *` then if you want it to stay 6 PM year-round.
 - **Allowed tools:** `Bash`, `Read`, `Write`, `Edit`
 - **Prompt:** (fill in your real secret values — these live in the routine
   config, which is stored in Anthropic's cloud, not in git)
