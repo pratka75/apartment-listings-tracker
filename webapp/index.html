@@ -23,6 +23,15 @@
   .hint { font-weight:400; color:var(--muted); font-size:12px; }
   input, select { width:100%; padding:9px 10px; border:1px solid var(--border);
                   border-radius:8px; background:transparent; color:var(--fg); font-size:14px; }
+  /* Give the dropdown a solid background so options are readable in dark mode. */
+  select { background-color:var(--card); color:var(--fg); }
+  select option { background-color:var(--card); color:var(--fg); }
+  .howto { background:var(--card); border:1px solid var(--border);
+           border-left:4px solid var(--accent); border-radius:8px;
+           padding:14px 16px; font-size:13px; margin-bottom:18px; }
+  .howto ol { margin:8px 0 0; padding-left:20px; }
+  .howto li { margin:3px 0; }
+  .howto a { color:var(--accent2); }
   .row { display:flex; gap:12px; flex-wrap:wrap; }
   .row > div { flex:1; min-width:120px; }
   .checks { display:flex; gap:18px; flex-wrap:wrap; margin-top:8px; }
@@ -52,6 +61,23 @@
   <h1>🏙️ Set up your apartment alerts</h1>
   <p class="sub">Fill in what you're looking for, then download your settings.
      Everything stays in your browser — nothing is uploaded.</p>
+
+  <div class="howto">
+    <strong>How this works</strong> — this page just builds your <em>settings file</em>; it does not
+    send alerts by itself. To get a daily email of matching apartments:
+    <ol>
+      <li>Fill in the form below and click <strong>Download settings</strong>.</li>
+      <li>Get your own free copy of the app from the
+          <a href="https://github.com/pratka75/apartment-listings-tracker" target="_blank" rel="noopener">
+          GitHub repository</a> and drop the settings file into it.</li>
+      <li>Add your email address, email app-password, and a free
+          <a href="https://app.rentcast.io/app/api" target="_blank" rel="noopener">RentCast API key</a>
+          as secrets, then turn on the daily job (GitHub Actions).</li>
+    </ol>
+    Full step-by-step instructions are in the repository's
+    <a href="https://github.com/pratka75/apartment-listings-tracker#readme" target="_blank" rel="noopener">README</a>.
+    You run your own copy — your details never leave your machine.
+  </div>
 
   <div class="note">🔒 <strong>No passwords here.</strong> This page only saves your search
      preferences. Your email password and any API key are added separately during setup —
