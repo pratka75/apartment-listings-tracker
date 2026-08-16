@@ -1,0 +1,48 @@
+name: Daily Apartment Digest
+
+# Runs the tracker on a schedule and emails the digest. Secrets are stored as
+# encrypted GitHub Actions secrets (Settings -> Secrets and variables -> Actions):
+#   GMAIL_SENDER, GMAIL_APP_PASSWORD, RENTCAST_API_KEY, DIGEST_RECIPIENT
+# Filters come from the committed config.local.json.
+
+on:
+  schedule:
+    - cron: "0 22 * * *"      # 22:00 UTC = 6 PM ET (EDT). In winter (EST) use "0 23 * * *".
+  workflow_dispatch: {}         # allow manual "Run workflow" for testing
+
+permissions:
+  contents: write               # allows committing the snapshot state back
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tracker and email the digest
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RENTCAST_API_KEY: ${{ secrets.RENTCAST_API_KEY }}
+          DIGEST_RECIPIENT: ${{ secrets.DIGEST_RECIPIENT }}
+        run: python main.py --email
+
+      - name: Persist snapshot state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f snapshot.json rentcast_usage.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "state update [skip ci]"
+            git push
+          fi

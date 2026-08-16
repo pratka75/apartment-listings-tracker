@@ -64,21 +64,26 @@ python main.py --email        # fetch, build digest, email it
 
 ---
 
-## Hands-free hosting on Claude cloud
+## Hands-free hosting on GitHub Actions
 
-This tracker is set up to run as a **scheduled Claude cloud agent** (a "routine")
-so it runs daily without your machine being on. See
-[`docs/CLOUD_DEPLOY.md`](docs/CLOUD_DEPLOY.md) for the full walkthrough. In short:
+The included workflow [`.github/workflows/daily-digest.yml`](.github/workflows/daily-digest.yml)
+runs the tracker daily (6 PM ET) with no machine of your own — GitHub's runners
+have full network access, send the email, and commit state back for you.
 
-1. Push this repo to GitHub (private).
-2. Create a routine that clones the repo, injects secrets from the routine
-   config (never committed), runs `python main.py --email`, and commits the
-   updated `snapshot.json` back so change-detection persists between days.
-3. Schedule it daily.
+**Setup (one time):**
+1. In the repo: **Settings → Secrets and variables → Actions → New repository secret** —
+   add four secrets: `GMAIL_SENDER`, `GMAIL_APP_PASSWORD`, `RENTCAST_API_KEY`, `DIGEST_RECIPIENT`.
+2. **Actions** tab → enable workflows if prompted.
+3. Test it: **Actions → Daily Apartment Digest → Run workflow**. Confirm the email
+   arrives and a `state update` commit appears.
+4. It then runs automatically on the daily schedule.
 
-> Security note: cloud hosting means your Gmail app password and RentCast key
-> must live in the cloud routine config. Use a dedicated app password you can
-> revoke, and keep the repo private.
+Filters come from the committed `config.local.json` — edit that file to change
+budget/beds/area. Secrets live only in encrypted Actions secrets, never in git.
+
+> Note: the Claude cloud "routine" runner is **not** suitable — its network
+> sandbox blocks the listing sites and SMTP. GitHub Actions is the supported path.
+> (`docs/CLOUD_DEPLOY.md` retained for historical reference.)
 
 ---
 

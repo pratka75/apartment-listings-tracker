@@ -55,9 +55,17 @@ def send(subject: str, html_body: str, to: str | None = None) -> None:
     msg.add_alternative(html_body, subtype="html")
 
     ctx = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ctx) as server:
-        server.login(sender, app_password)
-        server.send_message(msg, from_addr=sender, to_addrs=recipients)
+    try:
+        # Preferred: implicit TLS on 465.
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ctx, timeout=30) as server:
+            server.login(sender, app_password)
+            server.send_message(msg, from_addr=sender, to_addrs=recipients)
+    except OSError:
+        # Some sandboxes block 465; fall back to STARTTLS on 587.
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+            server.starttls(context=ctx)
+            server.login(sender, app_password)
+            server.send_message(msg, from_addr=sender, to_addrs=recipients)
     print(f"Email sent to {len(recipients)} recipient(s).")
 
 
