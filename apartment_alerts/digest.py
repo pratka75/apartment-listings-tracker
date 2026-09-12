@@ -13,7 +13,7 @@ from urllib.parse import quote_plus, urlsplit
 
 from .config import get_config
 
-MAX_ROWS_PER_CATEGORY = 25
+MAX_ROWS_PER_CATEGORY = 500  # effectively "show all"; ceiling guards pathological runs
 
 
 def esc(v) -> str:

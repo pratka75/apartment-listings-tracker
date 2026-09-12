@@ -65,9 +65,10 @@ def fetch(url: str = URL, timeout: int = 30) -> list[dict]:
         sqft_raw = _col(block, "sqft")
         sqft = _first(r"([\d,]+)", sqft_raw) if sqft_raw else None
 
-        rent_raw = _col(block, "rent")
-        price = _first(r"\$([\d,]+)", rent_raw)
-        available = re.sub(r"^\$[\d,]+\s*", "", rent_raw).strip() or None
+        rent_raw = _col(block, "rent")            # e.g. "$3,808 Available Now" or "$ 2,864 /mo* ... Available Now ..."
+        price = _first(r"\$\s*([\d,]+)", rent_raw)  # first $-amount = the monthly rent
+        m = re.search(r"Available[^&<]*", rent_raw)
+        available = (m.group().strip() if m else rent_raw.strip()) or None
 
         # Per-unit floor-plan PDF (public asset, no API involved).
         floorplan = _first(r'href="(https://adkastcdn[^"]+\.pdf)"', block)

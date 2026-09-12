@@ -1,7 +1,7 @@
 {
   "search": {
     "bedrooms": [1, 2, 3],
-    "max_rent": 4200,
+    "max_rent": 5500,
     "location": {
       "latitude": 40.7266,
       "longitude": -74.0339,
