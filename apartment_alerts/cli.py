@@ -41,8 +41,8 @@ def gather(cfg: dict):
     listings += link_listings
 
     # Keep only the requested bedroom count (when a listing states its beds).
-    beds = cfg["search"]["bedrooms"]
-    listings = [l for l in listings if l.get("beds") in (None, beds)]
+    beds = set(cfg["search"]["bedrooms"])
+    listings = [l for l in listings if l.get("beds") in beds]
 
     # De-dupe by id.
     return list({l["id"]: l for l in listings}.values()), manual
@@ -72,7 +72,7 @@ def main():
         from . import mailer
         n = len([l for l in changes["new"] if (l.get("price") or 1e9) <= cfg["search"]["max_rent"]])
         d = sum(1 for c in changes["price_changes"] if c["delta"] < 0)
-        beds = cfg["search"]["bedrooms"]
+        beds = "/".join(map(str, cfg["search"]["bedrooms"]))
         mailer.send(f"{beds}BR apartments — {n} new, {d} price drops ({date.today():%b %d})", html)
 
     if no_save:

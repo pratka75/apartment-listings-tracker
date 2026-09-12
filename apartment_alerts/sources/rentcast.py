@@ -46,7 +46,7 @@ def _check_and_bump_budget() -> None:
 def _params(cfg: dict) -> dict:
     s = cfg["search"]
     loc = s["location"]
-    p = {"bedrooms": s["bedrooms"], "status": "Active", "limit": 500}
+    p = {"bedrooms": ",".join(str(b) for b in s["bedrooms"]), "status": "Active", "limit": 500}
     if "latitude" in loc:
         p.update(latitude=loc["latitude"], longitude=loc["longitude"],
                  radius=loc.get("radius_miles", 1))

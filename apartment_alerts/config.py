@@ -45,7 +45,12 @@ def _validate(cfg: dict) -> dict:
     _require(isinstance(search, dict), "'search' must be an object")
 
     beds = search.get("bedrooms")
-    _require(isinstance(beds, int) and 0 <= beds <= 10, "search.bedrooms must be an int 0-10")
+    if isinstance(beds, int):
+        beds = [beds]
+    _require(isinstance(beds, list) and beds
+             and all(isinstance(b, int) and 0 <= b <= 10 for b in beds),
+             "search.bedrooms must be an int or a list of ints 0-10")
+    search["bedrooms"] = sorted(set(beds))
 
     max_rent = search.get("max_rent")
     _require(isinstance(max_rent, int) and 0 < max_rent <= 1_000_000,

@@ -1,6 +1,6 @@
 {
   "search": {
-    "bedrooms": 2,
+    "bedrooms": [1, 2, 3],
     "max_rent": 4200,
     "location": {
       "latitude": 40.7266,
@@ -12,7 +12,7 @@
     "rentcast": true
   },
   "watch_urls": [
-    "https://www.newportrentals.com/2-bedroom-apartments-jersey-city/",
+    "https://www.newportrentals.com/apartments-jersey-city-for-rent/",
     "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/",
     "https://www.rentcafe.com/apartments/nj/jersey-city/the-blvd-collection/default.aspx"
   ]
