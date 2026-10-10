@@ -1,20 +1,6 @@
 {
-  "last_run": "2026-10-09T01:46:11",
+  "last_run": "2026-10-10T01:32:35",
   "active": {
-    "rentcast|160 morgan st, apt 501, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "160 Morgan St, Apt 501, Jersey City, NJ 07302",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1130,
-      "price": 5425,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=160+Morgan+St%2C+Apt+501%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|160 morgan st, apt 501, jersey city, nj 07302"
-    },
     "rentcast|118 erie st, unit 5, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -71,19 +57,47 @@
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 1504, jersey city, nj 07302"
     },
-    "rentcast|65 bay st, unit 05-01, jersey city, nj 07302": {
+    "rentcast|20 newport pkwy, apt 1209, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
       "unit": null,
-      "address": "65 Bay St, Unit 05-01, Jersey City, NJ 07302",
+      "address": "20 Newport Pkwy, Apt 1209, Jersey City, NJ 07310",
       "beds": 1,
       "baths": 1,
-      "sqft": null,
-      "price": 3163,
+      "sqft": 780,
+      "price": 3750,
       "available": "Active",
-      "url": "https://www.google.com/search?q=65+Bay+St%2C+Unit+05-01%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "url": "https://www.google.com/search?q=20+Newport+Pkwy%2C+Apt+1209%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
-      "id": "rentcast|65 bay st, unit 05-01, jersey city, nj 07302"
+      "id": "rentcast|20 newport pkwy, apt 1209, jersey city, nj 07310"
+    },
+    "rentcast|1 harborside pl, jersey city, nj 07311": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "1 Harborside Pl, Jersey City, NJ 07311",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 703,
+      "price": 3838,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=1+Harborside+Pl%2C+Jersey+City%2C+NJ+07311+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|1 harborside pl, jersey city, nj 07311"
+    },
+    "rentcast|427 washington blvd, unit 2-2, jersey city, nj 07310": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "427 Washington Blvd, Unit 2-2, Jersey City, NJ 07310",
+      "beds": 2,
+      "baths": 2,
+      "sqft": null,
+      "price": 5500,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=427+Washington+Blvd%2C+Unit+2-2%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|427 washington blvd, unit 2-2, jersey city, nj 07310"
     },
     "rentcast|425 washington blvd, unit mn2203, jersey city, nj 07310": {
       "source": "rentcast",
@@ -99,6 +113,20 @@
       "floorplan_url": null,
       "id": "rentcast|425 washington blvd, unit mn2203, jersey city, nj 07310"
     },
+    "rentcast|65 bay st, unit 05-01, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "65 Bay St, Unit 05-01, Jersey City, NJ 07302",
+      "beds": 1,
+      "baths": 1,
+      "sqft": null,
+      "price": 3163,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=65+Bay+St%2C+Unit+05-01%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|65 bay st, unit 05-01, jersey city, nj 07302"
+    },
     "rentcast|219 pavonia ave, apt 3, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -112,34 +140,6 @@
       "url": "https://www.google.com/search?q=219+Pavonia+Ave%2C+Apt+3%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|219 pavonia ave, apt 3, jersey city, nj 07302"
-    },
-    "rentcast|148 1st st, unit 1689, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "148 1st St, Unit 1689, Jersey City, NJ 07302",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 600,
-      "price": 4090,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=148+1st+St%2C+Unit+1689%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|148 1st st, unit 1689, jersey city, nj 07302"
-    },
-    "rentcast|427 washington blvd, unit 1-1, jersey city, nj 07310": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "427 Washington Blvd, Unit 1-1, Jersey City, NJ 07310",
-      "beds": 1,
-      "baths": 1,
-      "sqft": null,
-      "price": 3995,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=427+Washington+Blvd%2C+Unit+1-1%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|427 washington blvd, unit 1-1, jersey city, nj 07310"
     },
     "rentcast|427 washington blvd, unit 3-1, jersey city, nj 07310": {
       "source": "rentcast",
@@ -197,33 +197,33 @@
       "floorplan_url": null,
       "id": "rentcast|427 washington blvd, unit 3-2, jersey city, nj 07310"
     },
-    "rentcast|427 washington blvd, unit 2-2, jersey city, nj 07310": {
+    "rentcast|427 washington blvd, unit 1-1, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
       "unit": null,
-      "address": "427 Washington Blvd, Unit 2-2, Jersey City, NJ 07310",
-      "beds": 2,
-      "baths": 2,
-      "sqft": null,
-      "price": 5500,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=427+Washington+Blvd%2C+Unit+2-2%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|427 washington blvd, unit 2-2, jersey city, nj 07310"
-    },
-    "rentcast|425 washington blvd, unit m1-3711, jersey city, nj 07310": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "425 Washington Blvd, Unit M1-3711, Jersey City, NJ 07310",
+      "address": "427 Washington Blvd, Unit 1-1, Jersey City, NJ 07310",
       "beds": 1,
       "baths": 1,
-      "sqft": 723,
-      "price": 3764,
+      "sqft": null,
+      "price": 3995,
       "available": "Active",
-      "url": "https://www.google.com/search?q=425+Washington+Blvd%2C+Unit+M1-3711%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "url": "https://www.google.com/search?q=427+Washington+Blvd%2C+Unit+1-1%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
-      "id": "rentcast|425 washington blvd, unit m1-3711, jersey city, nj 07310"
+      "id": "rentcast|427 washington blvd, unit 1-1, jersey city, nj 07310"
+    },
+    "rentcast|148 1st st, unit 1689, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "148 1st St, Unit 1689, Jersey City, NJ 07302",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 600,
+      "price": 4090,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=148+1st+St%2C+Unit+1689%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|148 1st st, unit 1689, jersey city, nj 07302"
     },
     "rentcast|444 washington blvd, jersey city, nj 07310": {
       "source": "rentcast",
@@ -233,7 +233,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 693,
-      "price": 3715,
+      "price": 3710,
       "available": "Active",
       "url": "https://www.google.com/search?q=444+Washington+Blvd%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
@@ -253,6 +253,20 @@
       "floorplan_url": null,
       "id": "rentcast|65 bay st, unit 45-02, jersey city, nj 07302"
     },
+    "rentcast|425 washington blvd, unit m1-3711, jersey city, nj 07310": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "425 Washington Blvd, Unit M1-3711, Jersey City, NJ 07310",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 723,
+      "price": 3764,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=425+Washington+Blvd%2C+Unit+M1-3711%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|425 washington blvd, unit m1-3711, jersey city, nj 07310"
+    },
     "rentcast|425 washington blvd, unit m1-1510, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
@@ -266,6 +280,20 @@
       "url": "https://www.google.com/search?q=425+Washington+Blvd%2C+Unit+M1-1510%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|425 washington blvd, unit m1-1510, jersey city, nj 07310"
+    },
+    "rentcast|425 washington blvd, unit m1-0202, jersey city, nj 07310": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "425 Washington Blvd, Unit M1-0202, Jersey City, NJ 07310",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 868,
+      "price": 3380,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=425+Washington+Blvd%2C+Unit+M1-0202%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|425 washington blvd, unit m1-0202, jersey city, nj 07310"
     },
     "rentcast|425 washington blvd, unit m1-3307, jersey city, nj 07310": {
       "source": "rentcast",
@@ -281,19 +309,19 @@
       "floorplan_url": null,
       "id": "rentcast|425 washington blvd, unit m1-3307, jersey city, nj 07310"
     },
-    "rentcast|425 washington blvd, unit m1-0202, jersey city, nj 07310": {
+    "rentcast|150 bay st, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
       "unit": null,
-      "address": "425 Washington Blvd, Unit M1-0202, Jersey City, NJ 07310",
+      "address": "150 Bay St, Jersey City, NJ 07302",
       "beds": 1,
       "baths": 1,
-      "sqft": 868,
-      "price": 3380,
+      "sqft": 1800,
+      "price": 6750,
       "available": "Active",
-      "url": "https://www.google.com/search?q=425+Washington+Blvd%2C+Unit+M1-0202%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "url": "https://www.google.com/search?q=150+Bay+St%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
-      "id": "rentcast|425 washington blvd, unit m1-0202, jersey city, nj 07310"
+      "id": "rentcast|150 bay st, jersey city, nj 07302"
     },
     "rentcast|20 2nd st, apt 2511, jersey city, nj 07302": {
       "source": "rentcast",
@@ -337,20 +365,6 @@
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 2909, jersey city, nj 07302"
     },
-    "rentcast|142 steuben st, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "142 Steuben St, Jersey City, NJ 07302",
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1212,
-      "price": 5375,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=142+Steuben+St%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|142 steuben st, jersey city, nj 07302"
-    },
     "rentcast|160 morgan st, unit p209, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -364,6 +378,20 @@
       "url": "https://www.google.com/search?q=160+Morgan+St%2C+Unit+P209%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, unit p209, jersey city, nj 07302"
+    },
+    "rentcast|142 steuben st, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "142 Steuben St, Jersey City, NJ 07302",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1212,
+      "price": 5375,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=142+Steuben+St%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|142 steuben st, jersey city, nj 07302"
     },
     "rentcast|159 2nd st, apt 702, jersey city, nj 07302": {
       "source": "rentcast",
@@ -407,20 +435,6 @@
       "floorplan_url": null,
       "id": "rentcast|144 1st st, unit 6g, jersey city, nj 07302"
     },
-    "rentcast|160 morgan st, unit p201, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "160 Morgan St, Unit P201, Jersey City, NJ 07302",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1163,
-      "price": 6550,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=160+Morgan+St%2C+Unit+P201%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|160 morgan st, unit p201, jersey city, nj 07302"
-    },
     "rentcast|160 morgan st, apt 1406, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -448,6 +462,20 @@
       "url": "https://www.google.com/search?q=160+Morgan+St%2C+Apt+2407%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 2407, jersey city, nj 07302"
+    },
+    "rentcast|160 morgan st, unit p201, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "160 Morgan St, Unit P201, Jersey City, NJ 07302",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1163,
+      "price": 6550,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=160+Morgan+St%2C+Unit+P201%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|160 morgan st, unit p201, jersey city, nj 07302"
     },
     "rentcast|160 morgan st, apt 2206, jersey city, nj 07302": {
       "source": "rentcast",
@@ -505,34 +533,6 @@
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 2902, jersey city, nj 07302"
     },
-    "rentcast|160 1st st, apt 1005, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "160 1st St, Apt 1005, Jersey City, NJ 07302",
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1270,
-      "price": 6000,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=160+1st+St%2C+Apt+1005%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|160 1st st, apt 1005, jersey city, nj 07302"
-    },
-    "rentcast|150 bay st, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "150 Bay St, Jersey City, NJ 07302",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 1453,
-      "price": 4495,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=150+Bay+St%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|150 bay st, jersey city, nj 07302"
-    },
     "rentcast|20 2nd st, apt 608, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -546,6 +546,20 @@
       "url": "https://www.google.com/search?q=20+2nd+St%2C+Apt+608%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|20 2nd st, apt 608, jersey city, nj 07302"
+    },
+    "rentcast|160 1st st, apt 1005, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "160 1st St, Apt 1005, Jersey City, NJ 07302",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1270,
+      "price": 6000,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=160+1st+St%2C+Apt+1005%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|160 1st st, apt 1005, jersey city, nj 07302"
     },
     "rentcast|638 jersey ave, unit 3, jersey city, nj 07302": {
       "source": "rentcast",
@@ -561,20 +575,6 @@
       "floorplan_url": null,
       "id": "rentcast|638 jersey ave, unit 3, jersey city, nj 07302"
     },
-    "rentcast|1 shore ln, apt 1502, jersey city, nj 07310": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "1 Shore Ln, Apt 1502, Jersey City, NJ 07310",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1120,
-      "price": 5300,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=1+Shore+Ln%2C+Apt+1502%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|1 shore ln, apt 1502, jersey city, nj 07310"
-    },
     "rentcast|160 morgan st, apt 3104, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -589,19 +589,19 @@
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 3104, jersey city, nj 07302"
     },
-    "rentcast|234 2nd st, apt 3, jersey city, nj 07302": {
+    "rentcast|1 shore ln, apt 1502, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
       "unit": null,
-      "address": "234 2nd St, Apt 3, Jersey City, NJ 07302",
-      "beds": 3,
+      "address": "1 Shore Ln, Apt 1502, Jersey City, NJ 07310",
+      "beds": 2,
       "baths": 2,
-      "sqft": 1380,
-      "price": 4900,
+      "sqft": 1120,
+      "price": 5300,
       "available": "Active",
-      "url": "https://www.google.com/search?q=234+2nd+St%2C+Apt+3%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "url": "https://www.google.com/search?q=1+Shore+Ln%2C+Apt+1502%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
-      "id": "rentcast|234 2nd st, apt 3, jersey city, nj 07302"
+      "id": "rentcast|1 shore ln, apt 1502, jersey city, nj 07310"
     },
     "rentcast|389 washington st, apt 26g, jersey city, nj 07302": {
       "source": "rentcast",
@@ -617,6 +617,20 @@
       "floorplan_url": null,
       "id": "rentcast|389 washington st, apt 26g, jersey city, nj 07302"
     },
+    "rentcast|234 2nd st, apt 3, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "234 2nd St, Apt 3, Jersey City, NJ 07302",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1380,
+      "price": 4900,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=234+2nd+St%2C+Apt+3%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|234 2nd st, apt 3, jersey city, nj 07302"
+    },
     "rentcast|1 shore ln, apt 1211, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
@@ -631,20 +645,6 @@
       "floorplan_url": null,
       "id": "rentcast|1 shore ln, apt 1211, jersey city, nj 07310"
     },
-    "rentcast|2 2nd st, ph 4004, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "2 2nd St, Ph 4004, Jersey City, NJ 07302",
-      "beds": 2,
-      "baths": 2.5,
-      "sqft": 1369,
-      "price": 7800,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=2+2nd+St%2C+Ph+4004%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|2 2nd st, ph 4004, jersey city, nj 07302"
-    },
     "rentcast|160 morgan st, apt 1505, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -658,6 +658,20 @@
       "url": "https://www.google.com/search?q=160+Morgan+St%2C+Apt+1505%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 1505, jersey city, nj 07302"
+    },
+    "rentcast|2 2nd st, ph 4004, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "2 2nd St, Ph 4004, Jersey City, NJ 07302",
+      "beds": 2,
+      "baths": 2.5,
+      "sqft": 1369,
+      "price": 7800,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=2+2nd+St%2C+Ph+4004%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|2 2nd st, ph 4004, jersey city, nj 07302"
     },
     "rentcast|75 park ln s, unit 1412, jersey city, nj 07310": {
       "source": "rentcast",
@@ -687,6 +701,20 @@
       "floorplan_url": null,
       "id": "rentcast|389 washington st, apt 27g, jersey city, nj 07302"
     },
+    "rentcast|20 2nd st, apt 306, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "20 2nd St, Apt 306, Jersey City, NJ 07302",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 675,
+      "price": 3400,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=20+2nd+St%2C+Apt+306%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|20 2nd st, apt 306, jersey city, nj 07302"
+    },
     "rentcast|249 8th st, apt 4, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -715,20 +743,6 @@
       "floorplan_url": null,
       "id": "rentcast|242 10th st, jersey city, nj 07302"
     },
-    "rentcast|20 2nd st, apt 306, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "20 2nd St, Apt 306, Jersey City, NJ 07302",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 675,
-      "price": 3400,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=20+2nd+St%2C+Apt+306%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|20 2nd st, apt 306, jersey city, nj 07302"
-    },
     "rentcast|75 park ln s, unit 412, jersey city, nj 07310": {
       "source": "rentcast",
       "building": null,
@@ -737,7 +751,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1118,
-      "price": 5980,
+      "price": 5800,
       "available": "Active",
       "url": "https://www.google.com/search?q=75+Park+Ln+S%2C+Unit+412%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
       "floorplan_url": null,
@@ -799,20 +813,6 @@
       "floorplan_url": null,
       "id": "rentcast|140 bay st, apt 7o, jersey city, nj 07302"
     },
-    "rentcast|2 shore ln, apt 405, jersey city, nj 07310": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "2 Shore Ln, Apt 405, Jersey City, NJ 07310",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 806,
-      "price": 4200,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=2+Shore+Ln%2C+Apt+405%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|2 shore ln, apt 405, jersey city, nj 07310"
-    },
     "rentcast|175 2nd st, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -827,19 +827,47 @@
       "floorplan_url": null,
       "id": "rentcast|175 2nd st, jersey city, nj 07302"
     },
-    "rentcast|20 2nd st, apt 2303, jersey city, nj 07302": {
+    "rentcast|20 2nd st, unit 2303a, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
       "unit": null,
-      "address": "20 2nd St, Apt 2303, Jersey City, NJ 07302",
+      "address": "20 2nd St, Unit 2303A, Jersey City, NJ 07302",
       "beds": 2,
       "baths": 2,
       "sqft": 1173,
       "price": 5600,
       "available": "Active",
-      "url": "https://www.google.com/search?q=20+2nd+St%2C+Apt+2303%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "url": "https://www.google.com/search?q=20+2nd+St%2C+Unit+2303A%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
-      "id": "rentcast|20 2nd st, apt 2303, jersey city, nj 07302"
+      "id": "rentcast|20 2nd st, unit 2303a, jersey city, nj 07302"
+    },
+    "rentcast|160 morgan st, unit p101, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "160 Morgan St, Unit P101, Jersey City, NJ 07302",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1163,
+      "price": 6550,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=160+Morgan+St%2C+Unit+P101%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|160 morgan st, unit p101, jersey city, nj 07302"
+    },
+    "rentcast|2 shore ln, apt 405, jersey city, nj 07310": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "2 Shore Ln, Apt 405, Jersey City, NJ 07310",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 806,
+      "price": 4200,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=2+Shore+Ln%2C+Apt+405%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|2 shore ln, apt 405, jersey city, nj 07310"
     },
     "rentcast|88 morgan st, apt 2304, jersey city, nj 07302": {
       "source": "rentcast",
@@ -897,20 +925,6 @@
       "floorplan_url": null,
       "id": "rentcast|205 10th st, apt 8t, jersey city, nj 07302"
     },
-    "rentcast|150 bay st, apt 722, jersey city, nj 07302": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "150 Bay St, Apt 722, Jersey City, NJ 07302",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 1800,
-      "price": 6750,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=150+Bay+St%2C+Apt+722%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|150 bay st, apt 722, jersey city, nj 07302"
-    },
     "rentcast|160 morgan st, apt 1405, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -924,6 +938,20 @@
       "url": "https://www.google.com/search?q=160+Morgan+St%2C+Apt+1405%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|160 morgan st, apt 1405, jersey city, nj 07302"
+    },
+    "rentcast|150 bay st, apt 722, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "150 Bay St, Apt 722, Jersey City, NJ 07302",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 1800,
+      "price": 6750,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=150+Bay+St%2C+Apt+722%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|150 bay st, apt 722, jersey city, nj 07302"
     },
     "rentcast|246 5th st unit gdn, jersey city, nj 07302": {
       "source": "rentcast",
@@ -1009,34 +1037,6 @@
       "floorplan_url": null,
       "id": "rentcast|389 washington st, jersey city, nj 07302"
     },
-    "rentcast|1 harborside pl, jersey city, nj 07311": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "1 Harborside Pl, Jersey City, NJ 07311",
-      "beds": 1,
-      "baths": 1,
-      "sqft": 703,
-      "price": 3838,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=1+Harborside+Pl%2C+Jersey+City%2C+NJ+07311+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|1 harborside pl, jersey city, nj 07311"
-    },
-    "rentcast|75 park ln s, unit 801, jersey city, nj 07310": {
-      "source": "rentcast",
-      "building": null,
-      "unit": null,
-      "address": "75 Park Ln S, Unit 801, Jersey City, NJ 07310",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1283,
-      "price": 6600,
-      "available": "Active",
-      "url": "https://www.google.com/search?q=75+Park+Ln+S%2C+Unit+801%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
-      "floorplan_url": null,
-      "id": "rentcast|75 park ln s, unit 801, jersey city, nj 07310"
-    },
     "rentcast|88 morgan st, apt 1501, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -1065,6 +1065,20 @@
       "floorplan_url": null,
       "id": "rentcast|2 2nd st, unit 24-03, jersey city, nj 07302"
     },
+    "rentcast|75 park ln s, unit 801, jersey city, nj 07310": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "75 Park Ln S, Unit 801, Jersey City, NJ 07310",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1283,
+      "price": 6600,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=75+Park+Ln+S%2C+Unit+801%2C+Jersey+City%2C+NJ+07310+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|75 park ln s, unit 801, jersey city, nj 07310"
+    },
     "rentcast|522 manila ave apt g, jersey city, nj 07302": {
       "source": "rentcast",
       "building": null,
@@ -1078,6 +1092,34 @@
       "url": "https://www.google.com/search?q=522+Manila+Ave+Apt+G%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
       "floorplan_url": null,
       "id": "rentcast|522 manila ave apt g, jersey city, nj 07302"
+    },
+    "rentcast|160 morgan st, apt 501, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "160 Morgan St, Apt 501, Jersey City, NJ 07302",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1130,
+      "price": 5425,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=160+Morgan+St%2C+Apt+501%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|160 morgan st, apt 501, jersey city, nj 07302"
+    },
+    "rentcast|20 2nd st, apt 2303, jersey city, nj 07302": {
+      "source": "rentcast",
+      "building": null,
+      "unit": null,
+      "address": "20 2nd St, Apt 2303, Jersey City, NJ 07302",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1173,
+      "price": 5600,
+      "available": "Active",
+      "url": "https://www.google.com/search?q=20+2nd+St%2C+Apt+2303%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
+      "floorplan_url": null,
+      "id": "rentcast|20 2nd st, apt 2303, jersey city, nj 07302"
     },
     "rentcast|160 morgan st, apt 701, jersey city, nj 07302": {
       "source": "rentcast",
@@ -2404,7 +2446,7 @@
       "baths": 1.0,
       "sqft": 759,
       "price": 4745,
-      "available": "Available 10/9/2026",
+      "available": "Available Now",
       "url": "https://www.newportrentals.com/apartments-jersey-city-for-rent/",
       "floorplan_url": "https://adkastcdn.cachefly.net/common/uploads/adkast_messagekast_com/unit_documents/5506--18529-ELL_1BR_Line10_FL07-30_F_TYPICAL.pdf",
       "id": "newport_rentals|ellipse|residence 1710"
@@ -3818,7 +3860,7 @@
       "baths": 2.0,
       "sqft": 942,
       "price": 6032,
-      "available": "Available 10/9/2026",
+      "available": "Available Now",
       "url": "https://www.newportrentals.com/apartments-jersey-city-for-rent/",
       "floorplan_url": "https://adkastcdn.cachefly.net/common/uploads/adkast_messagekast_com/unit_documents/6425--123449-BIS_2BR_Line_16_Fl_3-5_B1.pdf",
       "id": "newport_rentals|bisby|residence 316"
@@ -4265,7 +4307,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 693,
-      "price": 3710,
+      "price": 3695,
       "available": "2026-12-02",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-002-2219",
       "floorplan_url": null,
@@ -4280,7 +4322,7 @@
       "baths": 1,
       "sqft": 778,
       "price": 3820,
-      "available": "2026-10-09",
+      "available": "2026-10-10",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-004-4117",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-004-4117"
@@ -4293,7 +4335,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 752,
-      "price": 3830,
+      "price": 3875,
       "available": "2026-11-10",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6455",
       "floorplan_url": null,
@@ -4307,7 +4349,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 818,
-      "price": 3915,
+      "price": 3900,
       "available": "2026-11-27",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-005-5327",
       "floorplan_url": null,
@@ -4321,7 +4363,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 693,
-      "price": 3920,
+      "price": 3910,
       "available": "2026-10-30",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-005-5221",
       "floorplan_url": null,
@@ -4335,7 +4377,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 778,
-      "price": 3930,
+      "price": 3920,
       "available": "2026-11-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3143",
       "floorplan_url": null,
@@ -4349,7 +4391,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 817,
-      "price": 4035,
+      "price": 4080,
       "available": "2026-11-04",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3330",
       "floorplan_url": null,
@@ -4363,7 +4405,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 818,
-      "price": 4115,
+      "price": 4120,
       "available": "2026-12-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-005-5123",
       "floorplan_url": null,
@@ -4377,7 +4419,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 817,
-      "price": 4140,
+      "price": 4130,
       "available": "2026-11-20",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-002-2128",
       "floorplan_url": null,
@@ -4391,7 +4433,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 778,
-      "price": 4180,
+      "price": 4230,
       "available": "2026-11-13",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3138",
       "floorplan_url": null,
@@ -4405,7 +4447,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 832,
-      "price": 4230,
+      "price": 4235,
       "available": "2026-12-22",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-005-5239",
       "floorplan_url": null,
@@ -4419,7 +4461,7 @@
       "beds": 1,
       "baths": 1,
       "sqft": 817,
-      "price": 4295,
+      "price": 4290,
       "available": "2027-01-01",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6132",
       "floorplan_url": null,
@@ -4433,7 +4475,7 @@
       "beds": 1,
       "baths": 2,
       "sqft": 1351,
-      "price": 4490,
+      "price": 4480,
       "available": "2026-11-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-005-5539",
       "floorplan_url": null,
@@ -4447,7 +4489,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4660,
+      "price": 4675,
       "available": "2026-12-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3247",
       "floorplan_url": null,
@@ -4461,7 +4503,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4685,
+      "price": 4700,
       "available": "2026-11-20",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-001-1212",
       "floorplan_url": null,
@@ -4475,7 +4517,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4760,
+      "price": 4775,
       "available": "2026-12-03",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6153",
       "floorplan_url": null,
@@ -4489,25 +4531,11 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1106,
-      "price": 4765,
+      "price": 4780,
       "available": "2026-12-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-002-2131",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-002-2131"
-    },
-    "avalon|AVB-NJ002-004-4114": {
-      "source": "avalon",
-      "building": "Avalon Cove",
-      "unit": "4114",
-      "address": "444 Washington Boulevard 4114, Jersey City, NJ 07310",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1140,
-      "price": 4825,
-      "available": "2026-12-03",
-      "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-004-4114",
-      "floorplan_url": null,
-      "id": "avalon|AVB-NJ002-004-4114"
     },
     "avalon|AVB-NJ002-006-6251": {
       "source": "avalon",
@@ -4518,10 +4546,24 @@
       "baths": 2,
       "sqft": 1152,
       "price": 4835,
-      "available": "2026-10-09",
+      "available": "2026-10-10",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6251",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-006-6251"
+    },
+    "avalon|AVB-NJ002-004-4114": {
+      "source": "avalon",
+      "building": "Avalon Cove",
+      "unit": "4114",
+      "address": "444 Washington Boulevard 4114, Jersey City, NJ 07310",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1140,
+      "price": 4840,
+      "available": "2026-12-03",
+      "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-004-4114",
+      "floorplan_url": null,
+      "id": "avalon|AVB-NJ002-004-4114"
     },
     "avalon|AVB-NJ002-006-6453": {
       "source": "avalon",
@@ -4531,11 +4573,25 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4890,
+      "price": 4905,
       "available": "2026-12-01",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6453",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-006-6453"
+    },
+    "avalon|AVB-NJ002-006-6142": {
+      "source": "avalon",
+      "building": "Avalon Cove",
+      "unit": "6142",
+      "address": "444 Washington Boulevard 6142, Jersey City, NJ 07310",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1140,
+      "price": 4910,
+      "available": "2026-10-16",
+      "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6142",
+      "floorplan_url": null,
+      "id": "avalon|AVB-NJ002-006-6142"
     },
     "avalon|AVB-NJ002-001-1110": {
       "source": "avalon",
@@ -4545,7 +4601,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4910,
+      "price": 4925,
       "available": "2026-12-10",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-001-1110",
       "floorplan_url": null,
@@ -4559,7 +4615,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 4960,
+      "price": 4975,
       "available": "2026-11-13",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6344",
       "floorplan_url": null,
@@ -4573,25 +4629,11 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1279,
-      "price": 5010,
+      "price": 5025,
       "available": "2026-12-17",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-001-1508",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-001-1508"
-    },
-    "avalon|AVB-NJ002-006-6142": {
-      "source": "avalon",
-      "building": "Avalon Cove",
-      "unit": "6142",
-      "address": "444 Washington Boulevard 6142, Jersey City, NJ 07310",
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1140,
-      "price": 5135,
-      "available": "2026-10-16",
-      "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6142",
-      "floorplan_url": null,
-      "id": "avalon|AVB-NJ002-006-6142"
     },
     "avalon|AVB-NJ002-001-1306": {
       "source": "avalon",
@@ -4601,7 +4643,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1140,
-      "price": 5330,
+      "price": 5135,
       "available": "2026-10-29",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-001-1306",
       "floorplan_url": null,
@@ -4615,7 +4657,7 @@
       "beds": 2,
       "baths": 2,
       "sqft": 1266,
-      "price": 5340,
+      "price": 5315,
       "available": "2026-11-27",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-006-6534",
       "floorplan_url": null,
@@ -4644,10 +4686,24 @@
       "baths": 2,
       "sqft": 1781,
       "price": 5950,
-      "available": "2026-10-09",
+      "available": "2026-10-10",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-002-2541",
       "floorplan_url": null,
       "id": "avalon|AVB-NJ002-002-2541"
+    },
+    "avalon|AVB-NJ002-003-3444": {
+      "source": "avalon",
+      "building": "Avalon Cove",
+      "unit": "3444",
+      "address": "444 Washington Boulevard 3444, Jersey City, NJ 07310",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1445,
+      "price": 6835,
+      "available": "2026-12-03",
+      "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3444",
+      "floorplan_url": null,
+      "id": "avalon|AVB-NJ002-003-3444"
     },
     "avalon|AVB-NJ002-003-3557": {
       "source": "avalon",
@@ -4657,7 +4713,7 @@
       "beds": 3,
       "baths": 2,
       "sqft": 2454,
-      "price": 7100,
+      "price": 7090,
       "available": "2026-10-30",
       "url": "https://www.avaloncommunities.com/new-jersey/jersey-city-apartments/avalon-cove/apartment/NJ002-NJ002-003-3557",
       "floorplan_url": null,
@@ -9592,23 +9648,6 @@
         "url": "https://www.google.com/search?q=150+Bay+St%2C+Apt+821%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
         "floorplan_url": null,
         "id": "rentcast|150 bay st, apt 821, jersey city, nj 07302"
-      },
-      "removed_on": "2026-10-09"
-    },
-    "rentcast|160 morgan st, unit p101, jersey city, nj 07302": {
-      "listing": {
-        "source": "rentcast",
-        "building": null,
-        "unit": null,
-        "address": "160 Morgan St, Unit P101, Jersey City, NJ 07302",
-        "beds": 2,
-        "baths": 2,
-        "sqft": 1163,
-        "price": 6550,
-        "available": "Active",
-        "url": "https://www.google.com/search?q=160+Morgan+St%2C+Unit+P101%2C+Jersey+City%2C+NJ+07302+apartment+for+rent",
-        "floorplan_url": null,
-        "id": "rentcast|160 morgan st, unit p101, jersey city, nj 07302"
       },
       "removed_on": "2026-10-09"
     },
